@@ -16,12 +16,14 @@ namespace signup_case;
 
 public class Function
 {
-    /// <summary>
-    /// A simple function that takes a string and does a ToUpper
-    /// </summary>
-    /// <param name="input">The event for the Lambda function handler to process.</param>
-    /// <param name="context">The ILambdaContext that provides methods for logging and describing the Lambda environment.</param>
-    /// <returns></returns>
+    private readonly IDynamoDBHandler _handler;
+
+    public Function() : this(new DynamoDBHandler()) { }
+
+    public Function(IDynamoDBHandler handler)
+    {
+        _handler = handler;
+    }
     public async Task<object> FunctionHandler(object input, ILambdaContext context)
     {
         //Serialize the input to the LambdaInput class
@@ -30,17 +32,13 @@ public class Function
         Console.WriteLine($"Input context: {context}");
         Console.WriteLine($"Input received {input}");
         Console.WriteLine($"RequestType: {lambdaInput.RequestType}");
-
+        
         switch (lambdaInput.RequestType)
         {
             case "listParticipants":
-                if (lambdaInput.participant == null)
-                {
-                    Console.WriteLine("No participant provided");
-                    return null;
-                }
                 //Trading simplicity for performance - No unbounded resultsets in production
-                List<Participant> participants = await DynamoDBHandler.GetAllParticipantsAsync();
+                List<Participant> participants = await _handler.GetAllParticipantsAsync();
+                Console.WriteLine($"Got the following Participants: {participants}");
                 return participants;
             case "participant":
                 if (lambdaInput.participant == null)
@@ -48,7 +46,7 @@ public class Function
                     Console.WriteLine("No participant provided");
                     return null;
                 }
-                Participant participant = await DynamoDBHandler.GetParticipantAsync(lambdaInput.participant.id);
+                Participant participant = await _handler.GetParticipantAsync(lambdaInput.participant.id);
                 return participant;
             case "event":
                 if (lambdaInput.eventInfo == null)
@@ -56,7 +54,7 @@ public class Function
                     Console.WriteLine("No event provided");
                     return null;
                 }
-                Event eventRetrived = await DynamoDBHandler.GetEventAsync(lambdaInput.eventInfo.id);
+                Event eventRetrived = await _handler.GetEventAsync(lambdaInput.eventInfo.id);
                 return eventRetrived;
             case "addEvent":
                 if (lambdaInput.eventInfo == null)
@@ -66,7 +64,7 @@ public class Function
                 }
                 lambdaInput.eventInfo.builder().setClassification().setTypeTarget(lambdaInput.eventInfo.id);
                 Console.WriteLine($"Saving the event {lambdaInput.eventInfo}");
-                Event eventSaved = await DynamoDBHandler.SaveEventAsync(lambdaInput.eventInfo);
+                Event eventSaved = await _handler.SaveEventAsync(lambdaInput.eventInfo);
                 return eventSaved;
             case "signup":
                 SignUpInfo signUpInfo = lambdaInput.signUpInfo;
@@ -77,7 +75,7 @@ public class Function
                 Participant decodedParticipant = DecodeToken(token);
                 Console.WriteLine($"Decoded participant: {decodedParticipant}");
                 
-                Participant retrievedParticpant = await DynamoDBHandler.GetParticipantAsync(decodedParticipant.id);
+                Participant retrievedParticpant = await _handler.GetParticipantAsync(decodedParticipant.id);
                 if (retrievedParticpant == null)
                 {
                     Console.WriteLine("No participant found - creating one");
@@ -86,16 +84,16 @@ public class Function
                     decodedParticipant.builder().setTypeTarget(decodedParticipant.id);
                     //Logging here is a violation of GDPR
                     Console.WriteLine($"Saving the participant {decodedParticipant}");
-                    retrievedParticpant = await DynamoDBHandler.SaveParticipantAsync(decodedParticipant);
+                    retrievedParticpant = await _handler.SaveParticipantAsync(decodedParticipant);
                 }
-                Event retrievedEvent = await DynamoDBHandler.GetEventAsync(signUpInfo.eventInfo.id);
+                Event retrievedEvent = await _handler.GetEventAsync(signUpInfo.eventInfo.id);
                 if (retrievedEvent == null)
                 {
                     Console.WriteLine("No event found - cannot sign up");
                     return null;
                 }
                 //Signup
-                bool signedUp = await DynamoDBHandler.SignUpAsync(retrievedParticpant, retrievedEvent);
+                bool signedUp = await _handler.SignUpAsync(retrievedParticpant, retrievedEvent);
                 return new Confirmation(signedUp, retrievedEvent.name);
             default:
                 return null;

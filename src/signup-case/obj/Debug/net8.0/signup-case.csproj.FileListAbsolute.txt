@@ -15,3 +15,12 @@
 /Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.pdb
 /Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.genruntimeconfig.cache
 /Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/ref/signup-case.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/AWSSDK.Core.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/AWSSDK.DynamoDBv2.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/AWSSDK.S3.dll
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.sourcelink.json
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/Castle.Core.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/Moq.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/System.Diagnostics.EventLog.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll

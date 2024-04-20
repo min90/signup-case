@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xncwfsaBefyP8fBOz5iAlDb8Nhl88sDic962PuPQS9jV8yBEgWfXZorvBtsrAvSylxJdhU4O+iaVWKA4g3H/ZQ==",
+  "dgSpecHash": "uFV6BlFxZHX2+L6nENt4AVL/+u9FsrVkkwNc+ghqjO4nzBmiqh5qqC1sEqUzc9So52WdNXx8iwBHA+yk3PO3tw==",
   "success": true,
   "projectFilePath": "/Users/jems/Git/signup-case/src/signup-case/signup-case.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,9 @@
     "/Users/jems/.nuget/packages/awssdk.core/3.7.303.18/awssdk.core.3.7.303.18.nupkg.sha512",
     "/Users/jems/.nuget/packages/awssdk.dynamodbv2/3.7.302.19/awssdk.dynamodbv2.3.7.302.19.nupkg.sha512",
     "/Users/jems/.nuget/packages/awssdk.s3/3.7.307.19/awssdk.s3.3.7.307.19.nupkg.sha512",
+    "/Users/jems/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
+    "/Users/jems/.nuget/packages/moq/4.20.70/moq.4.20.70.nupkg.sha512",
+    "/Users/jems/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "/Users/jems/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.4/microsoft.netcore.app.runtime.linux-x64.8.0.4.nupkg.sha512",
     "/Users/jems/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.4/microsoft.aspnetcore.app.runtime.linux-x64.8.0.4.nupkg.sha512",
     "/Users/jems/.nuget/packages/microsoft.netcore.app.crossgen2.osx-arm64/8.0.4/microsoft.netcore.app.crossgen2.osx-arm64.8.0.4.nupkg.sha512"

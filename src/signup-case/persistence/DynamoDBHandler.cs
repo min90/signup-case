@@ -6,13 +6,14 @@ using AWSLambdaResolver.Models;
 
 namespace signup_case;
 
-public static class DynamoDBHandler
+public class DynamoDBHandler : IDynamoDBHandler
 {
     
-    private static AmazonDynamoDBClient dynamodbClient = new AmazonDynamoDBClient();
-    private static DynamoDBContext dbContext = new DynamoDBContext(dynamodbClient);
+    private DynamoDBContext dbContext = new DynamoDBContext(new AmazonDynamoDBClient());
     
-    public static async Task<Participant> GetParticipantAsync(string id)
+    public DynamoDBHandler() {}
+    
+    public async Task<Participant> GetParticipantAsync(string id)
     {
         Console.WriteLine($"Looking for participant with id {id}");
 
@@ -22,7 +23,7 @@ public static class DynamoDBHandler
         return participant;
     }
     
-    public static async Task<List<Participant>> GetAllParticipantsAsync()
+    public async Task<List<Participant>> GetAllParticipantsAsync()
     {
         var keyCondition = new Expression
         {
@@ -44,7 +45,7 @@ public static class DynamoDBHandler
         return results;
     }
     
-    public static async Task<Event> GetEventAsync(string id)
+    public async Task<Event> GetEventAsync(string id)
     {
         Console.WriteLine($"Looking for event with id {id}");
 
@@ -54,7 +55,7 @@ public static class DynamoDBHandler
         return @event;
     }
     
-    public static async Task<Event> SaveEventAsync(Event @event)
+    public async Task<Event> SaveEventAsync(Event @event)
     {
         Console.WriteLine($"Saving event {@event}");
 
@@ -62,7 +63,7 @@ public static class DynamoDBHandler
         return @event;
     }
     
-    public static async Task<Participant> SaveParticipantAsync(Participant participant)
+    public async Task<Participant> SaveParticipantAsync(Participant participant)
     {
         Console.WriteLine($"Saving participant {participant}");
 
@@ -70,7 +71,7 @@ public static class DynamoDBHandler
         return participant;
     }
     
-    public static async Task<bool> SignUpAsync(Participant participant, Event @event)
+    public async Task<bool> SignUpAsync(Participant participant, Event @event)
     {
         Console.WriteLine($"Signing up participant {participant} for event {@event}");
 
