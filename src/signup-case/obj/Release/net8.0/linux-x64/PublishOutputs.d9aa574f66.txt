@@ -1,0 +1,9 @@
+/Users/jems/Git/signup-case/src/signup-case/bin/Release/net8.0/publish/signup-case.deps.json
+/Users/jems/Git/signup-case/src/signup-case/bin/Release/net8.0/publish/signup-case.runtimeconfig.json
+/Users/jems/Git/signup-case/src/signup-case/bin/Release/net8.0/publish/signup-case.pdb
+/Users/jems/Git/signup-case/src/signup-case/bin/Release/net8.0/publish/Amazon.Lambda.Core.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Release/net8.0/publish/Amazon.Lambda.Serialization.SystemTextJson.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Release/net8.0/publish/AWSSDK.Core.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Release/net8.0/publish/AWSSDK.DynamoDBv2.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Release/net8.0/publish/AWSSDK.S3.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Release/net8.0/publish/signup-case.dll

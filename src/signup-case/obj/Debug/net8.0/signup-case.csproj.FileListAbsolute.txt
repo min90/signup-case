@@ -1,0 +1,17 @@
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/signup-case.deps.json
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/signup-case.runtimeconfig.json
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/signup-case.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/signup-case.pdb
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/Amazon.Lambda.Core.dll
+/Users/jems/Git/signup-case/src/signup-case/bin/Debug/net8.0/Amazon.Lambda.Serialization.SystemTextJson.dll
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.csproj.AssemblyReference.cache
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.AssemblyInfoInputs.cache
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.AssemblyInfo.cs
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.csproj.CoreCompileInputs.cache
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-c.74A880E5.Up2Date
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.dll
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/refint/signup-case.dll
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.pdb
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/signup-case.genruntimeconfig.cache
+/Users/jems/Git/signup-case/src/signup-case/obj/Debug/net8.0/ref/signup-case.dll

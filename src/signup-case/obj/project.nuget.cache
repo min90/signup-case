@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "xncwfsaBefyP8fBOz5iAlDb8Nhl88sDic962PuPQS9jV8yBEgWfXZorvBtsrAvSylxJdhU4O+iaVWKA4g3H/ZQ==",
+  "success": true,
+  "projectFilePath": "/Users/jems/Git/signup-case/src/signup-case/signup-case.csproj",
+  "expectedPackageFiles": [
+    "/Users/jems/.nuget/packages/amazon.lambda.core/2.2.0/amazon.lambda.core.2.2.0.nupkg.sha512",
+    "/Users/jems/.nuget/packages/amazon.lambda.serialization.systemtextjson/2.4.1/amazon.lambda.serialization.systemtextjson.2.4.1.nupkg.sha512",
+    "/Users/jems/.nuget/packages/awssdk.core/3.7.303.18/awssdk.core.3.7.303.18.nupkg.sha512",
+    "/Users/jems/.nuget/packages/awssdk.dynamodbv2/3.7.302.19/awssdk.dynamodbv2.3.7.302.19.nupkg.sha512",
+    "/Users/jems/.nuget/packages/awssdk.s3/3.7.307.19/awssdk.s3.3.7.307.19.nupkg.sha512",
+    "/Users/jems/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/8.0.4/microsoft.netcore.app.runtime.linux-x64.8.0.4.nupkg.sha512",
+    "/Users/jems/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/8.0.4/microsoft.aspnetcore.app.runtime.linux-x64.8.0.4.nupkg.sha512",
+    "/Users/jems/.nuget/packages/microsoft.netcore.app.crossgen2.osx-arm64/8.0.4/microsoft.netcore.app.crossgen2.osx-arm64.8.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
