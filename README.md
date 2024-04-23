@@ -1,8 +1,12 @@
 # Signup case
 
-The lambda function can be found in src/
+The lambda function can be found in src/signup-case/Function.cs - the lambda is built to be invoked by AWS AppSync with request and response template matching the in/output from the lambda.
 
-Deploy through 
+### Test
+
+The tests can be executed by changing directory to 
+
+### Deploy through 
 ```
 dotnet lambda deploy-function
 ```
