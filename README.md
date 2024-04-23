@@ -1,5 +1,7 @@
 # Signup case
 
+The lambda function can be found in src/
+
 Deploy through 
 ```
 dotnet lambda deploy-function
